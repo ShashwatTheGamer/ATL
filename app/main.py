@@ -2,7 +2,7 @@ from flask import Flask,send_from_directory,render_template, request,redirect
 import json
 from flask_cors import CORS, cross_origin
 
-app = Flask("app")
+app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
