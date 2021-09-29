@@ -190,7 +190,7 @@ questions = {
             "correctoption":"option1",
         },
 		"Q3" : {
-            "question":"Mercury is named after a Roman god. Which of the planet's attributes match that of the god it was named after?",
+            "question":"Mercury is named after a Roman God. Which of the planet's attributes match that of the god it was named after?",
             "option1":"its strength",
             "option2":"its behaviour",
             "option3":"its speed",
@@ -222,14 +222,14 @@ questions = {
     },
 	"earth" : {
         "Q1" : {
-            "question":"When can the earth's magnetic field be seen?",
+            "question":"When can the Earth's magnetic field be seen?",
             "option1":"aurora boriealis",
             "option2":"during an eclipse",
             "option3":"during summer solstice",
             "correctoption":"option1",
         },
 		"Q2" : {
-            "question":"Which planet(s) is/are in between Earth and the sun?",
+            "question":"Which planet(s) is/are in between Earth and the Sun?",
             "option1":"Mercury and Mars",
             "option2":"Mercury and Venus",
             "option3":"Just Mercury",
@@ -252,7 +252,7 @@ questions = {
             "correctoption":"option2",
         },
 		"Q2" : {
-            "question":"What kind of atmosphere does mars have?",
+            "question":"What kind of atmosphere does Mars have?",
             "option1":"medium",
             "option2":"thick",
             "option3":"thin",
@@ -291,7 +291,7 @@ questions = {
     },
 	"saturn" : {
         "Q1" : {
-            "question":"What is the density of the planet in g/cm^3?",
+            "question":"What is the density of Saturn in g/cm^3?",
             "option1":"0.132",
             "option2":"0.678°C",
             "option3":"3.154",

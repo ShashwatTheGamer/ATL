@@ -12,7 +12,7 @@ var heartindicatorImg, coinsindicatorImg
 var levelup0Img, levelup1Img, levelup2Img, levelup3Img;
 var levelup;
 
-var lives = 3;
+var lives = 5;
 var level = 0;
 
 var SPEED = 10;
@@ -34,12 +34,12 @@ function preload() {
 
 	spaceShipImg = loadImage(path+"images/rocket.png");
 	endImg = loadAnimation(path+"images/gameOver.png");
-	playButtonImg = loadImage(path+"images/buttons/start.png");
+	startButtonImg = loadImage(path+"images/buttons/start.png");
 	// replayButtonImg = loadImage(path+"images/playButton.png");
 
-	pauseButton
+	pauseButtonImg = loadImage(path+"images/icons/pause.png");
 
-	playButtonImg = loadImage(path+"images/buttons/play.jpeg");
+	playButtonImg = loadImage(path+"images/icons/play.png");
 
 	logoImg = loadImage(path+"images/logo.png");
 
@@ -70,8 +70,16 @@ function setup() {
 	levelup.visible = false;
 
 	startButton = createSprite((windowWidth / 2) + 50, (windowHeight / 2) + 150);
-	startButton.addImage(playButtonImg);
+	startButton.addImage(startButtonImg);
 	startButton.scale = 0.7;
+
+	pauseButton = createSprite(windowWidth-100, 100, 10, 10);
+	pauseButton.addImage(pauseButtonImg);
+	pauseButton.visible = false;
+
+	playButton = createSprite(windowWidth/2, windowHeight/2, 10, 10);
+	playButton.addImage(playButtonImg);
+	playButton.visible = false;
 
 	nextButton = createSprite((windowWidth / 2) + 50, (windowHeight / 2) + 150);
 	nextButton.addImage(nextButtonImg);
@@ -136,55 +144,52 @@ function draw() {
 	}
 
 	else if (gameState === "PLAY") {
-		// if(treasureCollection % 250 === 0 && level === 0) {
+		// if(treasureCollection % 100 === 0 && level === 0) {
 		// 	level += 1;
 		// 	// code for mercury quiz
     	// }
 
-		// else if(treasureCollection % 250 === 0 && level === 1) {
+		// else if(treasureCollection % 100 === 0 && level === 1) {
 		// 	level += 1;
 		// 	// code for venus quiz
     	// }
 
-		// else if(treasureCollection % 250 === 0 && level === 2) {
+		// else if(treasureCollection % 100 === 0 && level === 2) {
 		// 	level += 1;
 		// 	// code for earth quiz
     	// }
 
-		// else if(treasureCollection % 250 === 0 && level === 3) {
+		// else if(treasureCollection % 100 === 0 && level === 3) {
 		// 	level += 1;
 		// 	// code for mars quiz
     	// }
 
-		// else if(treasureCollection % 250 === 0 && level === 4) {
+		// else if(treasureCollection % 100 === 0 && level === 4) {
 		// 	level += 1;
 		// 	// code for jupiter quiz
     	// }
 
-		// else if(treasureCollection % 250 === 0 && level === 5) {
+		// else if(treasureCollection % 100 === 0 && level === 5) {
 		// 	level += 1;
 		// 	// code for saturn quiz
     	// }
 
-		// else if(treasureCollection % 250 === 0 && level === 6) {
+		// else if(treasureCollection % 100 === 0 && level === 6) {
 		// 	level += 1;
 		// 	// code for uranus quiz
     	// }
 
-		// else if(treasureCollection % 250 === 0 && level === 7) {
+		// else if(treasureCollection % 100 === 0 && level === 7) {
 		// 	level += 1;
 		// 	// code for neptune quiz
     	// }
 
-		// else if(treasureCollection % 250 === 0 && level === 8) {
+		// else if(treasureCollection % 100 === 0 && level === 8) {
 		// 	// code for BOSS FIGHT
     	// }
 
 		if (mousePressedOver(pauseButton)) {
-			startButton.visible = false;
-			logo.visible = false;
-			pauseButton
-			gameState = "PLAY";
+			pause();
 		}
 
 		// creating boy running
@@ -195,7 +200,7 @@ function draw() {
 		spaceShip.x = World.mouseX;
 
 		logo.visible = false;
-		startButton.visible = false;
+		playButton.visible = true;
 
 		edges = createEdgeSprites();
 		spaceShip.collide(edges);
@@ -276,6 +281,12 @@ function draw() {
 		window.location = "/quiz?question=Q1&planet="+planet+"&coins="+treasureCollection;
 	}
 
+	if(gameState === "PAUSE") {
+		if(mousePressedOver(playButton)) {
+			play();
+		}
+	}
+
 	drawSprites()
 
 }
@@ -314,5 +325,27 @@ function createSword() {
 		asteroid.lifetime = 200;
 		asteroidGroup.add(asteroid);
 	}
+}
+
+function pause() {
+	pauseButton.visible = false;
+	playButton.visible = true;
+	gameState = "PAUSE";
+}
+
+function play() {
+	pauseButton.visible = true;
+	playButton.visible = false;
+	gameState = "PLAY";
+}
+
+function reset() {
+	level = 0;
+	lives = 5;
+	gameState = "START";
+}
+
+function end() {
+	gameState = "OVER";
 }
 
