@@ -145,7 +145,7 @@ def Start():
 
 @app.route('/')
 def Home():
-    return redirect("/start")
+    return render_template('Main.html')
 
 @app.route('/game')
 def Game():

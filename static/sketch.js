@@ -7,12 +7,12 @@ var cashG, swordGroup;
 var playButton, playButtonImg, replayButton, replayButtonImg, nextButtonImg;
 var asteroid1, asteroid2, asteroid3, asteroid4, asteroid5;
 
-var heartindicatorImg, coinsindicatorImg
+var heartindicatorImg, coinsindicatorImg;
 
 var levelup0Img, levelup1Img, levelup2Img, levelup3Img;
 var levelup;
 
-var lives = 5;
+var lives = 3;
 var level = 0;
 
 var SPEED = 10;
@@ -32,10 +32,12 @@ function preload() {
 	asteroid4 = loadImage(path+"images/parts/part4.png");
 	asteroid5 = loadImage(path+"images/parts/part5.png");
 
+	gameoverImg = loadImage(path+"images/gameover1.png");
+
 	spaceShipImg = loadImage(path+"images/rocket.png");
 	endImg = loadAnimation(path+"images/gameOver.png");
 	startButtonImg = loadImage(path+"images/buttons/start.png");
-	// replayButtonImg = loadImage(path+"images/playButton.png");
+	resetButtonImg = loadImage(path+"images/playButton.png");z
 
 	pauseButtonImg = loadImage(path+"images/icons/pause.png");
 
@@ -85,6 +87,10 @@ function setup() {
 	nextButton.addImage(nextButtonImg);
 	nextButton.scale = 0.7;
 	nextButton.visible = false;
+
+	resetButton = createSprite(windowWidth/2, (windowHeight/2)+100);
+	resetButton.addImage(resetButtonImg);
+	resetButton.visible = false;
 
 	coincount = createSprite((windowWidth / 2) - 45, windowHeight / 15);
 	coincount.addImage(coins2Img);
@@ -200,7 +206,8 @@ function draw() {
 		spaceShip.x = World.mouseX;
 
 		logo.visible = false;
-		playButton.visible = true;
+		playButton.visible = false;
+		pauseButton.visible = true;
 
 		edges = createEdgeSprites();
 		spaceShip.collide(edges);
@@ -241,53 +248,36 @@ function draw() {
 	}
 
 	else if (gameState === "END") {
-
-	// 	nextButton.visible = true;
-	// 	levelup.visible = true;
-
-	// 	cashG.destroyEach();
-	// 	coincount.visible = false;
-	// 	asteroidGroup.destroyEach();
-	// 	spaceShip.visible = false;
-
-	// 	textSize(35);
-	// 	fill("gold");
-	// 	text("Coins: " + treasureCollection, (windowWidth / 2) - 60, 170);
-	// 	// 
-	// 	var levelupImg
-	// 	if (treasureCollection === 0) {
-	// 		levelupImg = levelup0Img
-	// 	} else if (treasureCollection < 500) {
-	// 		levelupImg = levelup1Img
-	// 	} else if (treasureCollection > 500 && treasureCollection < 1000) {
-	// 		levelupImg = levelup2Img
-	// 	} else {
-	// 		levelupImg = levelup3Img
-	// 	}
-
-	// 	levelup.addImage(levelupImg);
-
-	// 	if (mousePressedOver(nextButton)) {
-	// 		coincount.visible = false;
-	// 		nextButton.visible = false;
-	// 		levelup.visible = false;
-	// 		lives = 5;
-	// 		level = 0;
-	// 		gameState = "PLAY";
-	// 	}
-	// }
-		gameState = "REDIRECTING"
-		addCoins(parseInt(treasureCollection));
-		window.location = "/quiz?question=Q1&planet="+planet+"&coins="+treasureCollection;
+		if(treasureCollection >= 100) {
+			gameState = "REDIRECTING"
+			// addCoins(parseInt(treasureCollection));
+			window.location = "/quiz?question=Q1&planet="+planet+"&coins="+treasureCollection;
+		}
+		else {
+			gameState = "OVER";
+		}
 	}
 
 	if(gameState === "PAUSE") {
+		pauseButton.visible = false;
+		playButton.visible = true;
 		if(mousePressedOver(playButton)) {
 			play();
 		}
 	}
+	
+	if(gameState === "OVER") {
+		pauseButton.visible = false;
+		resetButton.visible = true;
+		spaceShip.x = windowWidth/2;
+		spaceShip.y = windowHeight/2;
+		spaceShip.addImage(gameoverImg);
+		if(mousePressedOver(resetButton)) {
+			reset();
+		}
+	}
 
-	drawSprites()
+	drawSprites();
 
 }
 
@@ -303,7 +293,7 @@ function createCash() {
 }
 
 function createSword() {
-	if (World.frameCount % 32 == 0) {
+	if (World.frameCount % 20 == 0) {
 		var asteroid = createSprite(Math.round(random(10, windowWidth), 40, 10, 10));
 		//generate random obstacles
 		var rand = Math.round(random(1, 5));
@@ -341,11 +331,8 @@ function play() {
 
 function reset() {
 	level = 0;
-	lives = 5;
+	lives = 3;
 	gameState = "START";
-}
-
-function end() {
-	gameState = "OVER";
+	window.location = "/game";
 }
 

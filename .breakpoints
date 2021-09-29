@@ -1,18 +1,3 @@
 {
-  "files": {
-    "static/sketch.js": [
-      {
-        "id": "0a091baa-9987-459e-afe3-82816094d37b",
-        "line": 26,
-        "version": 796,
-        "index": 631
-      },
-      {
-        "id": "c391282c-4925-47a1-9191-10eeaa323196",
-        "line": 262,
-        "version": 796,
-        "index": 6392
-      }
-    ]
-  }
+  "files": {}
 }
