@@ -1,4 +1,4 @@
-var planet = getLevel()
+var planet = getLevel();
 
 var path, spaceShip, cash, diamonds, jwellery, sword, end;
 var pathImg, spaceShipImg, cashImg, endImg;
@@ -22,7 +22,9 @@ var path = "https://"+window.location.hostname+"/";
 
 var scrollSpeed = 2;
 
+
 function preload() {
+
 	background1Img = loadImage(path+"images/background4.png");
 	background2Img = loadImage(path+"images/Background10.png");
 
@@ -131,10 +133,6 @@ function draw() {
 		x2 = width;
 	}
 
-	// if (spaceBackground2.y > spaceBackground2.height) {
-	// 	spaceBackground2.y = 0;
-	// }
-
 	if (gameState === "START") {
 
 		logo.visible = true;
@@ -150,49 +148,6 @@ function draw() {
 	}
 
 	else if (gameState === "PLAY") {
-		// if(treasureCollection % 100 === 0 && level === 0) {
-		// 	level += 1;
-		// 	// code for mercury quiz
-    	// }
-
-		// else if(treasureCollection % 100 === 0 && level === 1) {
-		// 	level += 1;
-		// 	// code for venus quiz
-    	// }
-
-		// else if(treasureCollection % 100 === 0 && level === 2) {
-		// 	level += 1;
-		// 	// code for earth quiz
-    	// }
-
-		// else if(treasureCollection % 100 === 0 && level === 3) {
-		// 	level += 1;
-		// 	// code for mars quiz
-    	// }
-
-		// else if(treasureCollection % 100 === 0 && level === 4) {
-		// 	level += 1;
-		// 	// code for jupiter quiz
-    	// }
-
-		// else if(treasureCollection % 100 === 0 && level === 5) {
-		// 	level += 1;
-		// 	// code for saturn quiz
-    	// }
-
-		// else if(treasureCollection % 100 === 0 && level === 6) {
-		// 	level += 1;
-		// 	// code for uranus quiz
-    	// }
-
-		// else if(treasureCollection % 100 === 0 && level === 7) {
-		// 	level += 1;
-		// 	// code for neptune quiz
-    	// }
-
-		// else if(treasureCollection % 100 === 0 && level === 8) {
-		// 	// code for BOSS FIGHT
-    	// }
 
 		if (mousePressedOver(pauseButton)) {
 			pause();
@@ -201,6 +156,7 @@ function draw() {
 		// creating boy running
 		startButton.visible = false;
 		coincount.visible = false;
+
 		// spaceShip.visible = true;
 		spaceShip.x = windowWidth / 2
 		spaceShip.x = World.mouseX;
@@ -214,7 +170,7 @@ function draw() {
 
 
 		createCash();
-		createSword();
+		createAsteroid();
 
 
 		if (cashG.isTouching(spaceShip)) {
@@ -248,9 +204,9 @@ function draw() {
 	}
 
 	else if (gameState === "END") {
+
 		if(treasureCollection >= 100) {
-			gameState = "REDIRECTING"
-			// addCoins(parseInt(treasureCollection));
+			gameState = "REDIRECTING";
 			window.location = "/quiz?question=Q1&planet="+planet+"&coins="+treasureCollection;
 		}
 		else {
@@ -281,6 +237,7 @@ function draw() {
 
 }
 
+
 function createCash() {
 	if (World.frameCount % 200 == 0) {
 		var cash = createSprite(Math.round(random(10, windowWidth), 40, 10, 10));
@@ -292,10 +249,11 @@ function createCash() {
 	}
 }
 
-function createSword() {
-	
+function createAsteroid() {
+
 	if (World.frameCount % 20 == 0) {
 		var asteroid = createSprite(Math.round(random(10, windowWidth), 40, 10, 10));
+
 		//generate random obstacles
 		var rand = Math.round(random(1, 5));
 		switch (rand) {
@@ -311,6 +269,7 @@ function createSword() {
 				break;
 			default: break;
 		}
+
 		asteroid.scale = 1.3;
 		asteroid.velocityY = SPEED;
 		asteroid.lifetime = 200;
@@ -336,4 +295,5 @@ function reset() {
 	gameState = "START";
 	window.location = "/game";
 }
+
 
