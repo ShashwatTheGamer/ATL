@@ -1,0 +1,583 @@
+{% extends 'base.html' %} {% block body %}
+<!DOCTYPE html>
+<html class="" lang="">
+
+<head>
+	<script type="text/javascript" class="silex-json-styles" data-silex-static="">
+		window.silex = window.silex || {};
+      window.silex.data = {
+        site: { width: 1200 },
+        pages: [
+          {
+            id: "page-page-1",
+            displayName: "Page 1",
+            link: { linkType: "LinkTypePage", href: "#!page-page-1" },
+            canDelete: true,
+            canProperties: true,
+            canMove: true,
+            canRename: true,
+            opened: false,
+          },
+        ],
+      };
+	</script>
+	<meta charset="UTF-8" />
+	<!-- generator meta tag -->
+	<!-- leave this for stats and Silex version check -->
+	<meta name="generator" content="Silex v2.2.13" />
+	<!-- End of generator meta tag -->
+	<script type="text/javascript" src="https://editor.silex.me/static/2.12/jquery.js" data-silex-static="">
+
+	</script>
+	<script type="text/javascript" src="https://editor.silex.me/static/2.12/jquery-ui.js" data-silex-static="" data-silex-remove-publish="">
+
+	</script>
+	<script type="text/javascript" src="https://editor.silex.me/static/2.12/pageable.js" data-silex-static="" data-silex-remove-publish="">
+
+	</script>
+	<script type="text/javascript" src="https://editor.silex.me/static/2.12/front-end.js" data-silex-static="">
+
+	</script>
+	<link rel="stylesheet" href="https://editor.silex.me/static/2.12/normalize.css" data-silex-static="" />
+	<link rel="stylesheet" href="https://editor.silex.me/static/2.12/front-end.css" data-silex-static="" />
+
+	<style type="text/css" class="silex-style">
+		.bigFont {
+			font-size: 50px;
+		}
+
+		.mediumFont {
+			font-size: 30px;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+		}
+
+		.mediumFont2 {
+			font-size: 40px;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-direction: column;
+		}
+
+		.whiteLink:link {
+			color: white;
+		}
+
+		.whiteLink:visited {
+			color: white;
+		}
+
+		.whiteLink:hover {
+			color: white;
+		}
+
+		.whiteLink:active {
+			color: white;
+		}
+	</style>
+	<script type="text/javascript" class="silex-script">
+
+	</script>
+	<style class="silex-inline-styles" type="text/css">
+		.body-initial {
+			background-color: rgba(255, 255, 255, 1);
+			position: static;
+			background-image: url(images/Background10.png);
+		}
+
+		.flip {
+			-webkit-transform: scaleX(-1);
+			transform: scaleX(-1);
+		}
+
+		.silex-id-1474394621033-3 {
+			position: static;
+			margin-top: -1px;
+		}
+
+		.silex-id-1632738567796-3 {
+			width: 106px;
+			height: 88px;
+			position: absolute;
+			top: 505px;
+			left: 1025px;
+		}
+
+		.silex-id-1474394621032-2 {
+			background-color: transparent;
+			min-height: 600px;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.silex-id-1632729281210-6 {
+			width: 106px;
+			height: 88px;
+			position: absolute;
+			top: 22px;
+			left: 23.979171752929688px;
+		}
+
+		.silex-id-1632740862975-19 {
+			width: 259px;
+			min-height: 160px;
+			position: absolute;
+			top: -15px;
+			left: 154px;
+		}
+
+		.silex-id-1632741183975-20 {
+			width: 228px;
+			height: 75px;
+			position: absolute;
+			top: 29px;
+			left: 170px;
+		}
+
+		.silex-id-1632747407058-0 {
+			width: 1128px;
+			height: 120px;
+			position: absolute;
+			top: 119px;
+			left: 23px;
+		}
+
+		.silex-id-1632747414355-1 {
+			width: 550px;
+			height: 98px;
+			position: absolute;
+			top: 255px;
+			left: 31px;
+		}
+
+		.silex-id-1632747575162-10 {
+			width: 550px;
+			height: 98px;
+			position: absolute;
+			top: 477px;
+			left: 39.66679382324219px;
+		}
+
+		.silex-id-1632747575461-11 {
+			width: 550px;
+			height: 98px;
+			position: absolute;
+			top: 364px;
+			left: 34px;
+		}
+
+		.silex-id-1632747627101-13 {
+			width: 331px;
+			height: 308px;
+			position: absolute;
+			top: 254.66675567626953px;
+			left: 769px;
+		}
+
+		.silex-id-1632747688138-14 {
+			width: 1110px;
+			min-height: 160px;
+			position: absolute;
+			top: 94.66672897338867px;
+			left: 34px;
+		}
+
+		.silex-id-1632747760771-16 {
+			width: 522px;
+			min-height: 160px;
+			position: absolute;
+			top: 223px;
+			left: 54px;
+		}
+
+		.silex-id-1632747830748-18 {
+			width: 522px;
+			min-height: 160px;
+			position: absolute;
+			top: 333px;
+			left: 53.979156494140625px;
+		}
+
+		.silex-id-1632747831018-19 {
+			width: 522px;
+			min-height: 160px;
+			position: absolute;
+			top: 448px;
+			left: 54.39582824707031px;
+		}
+
+		.silex-id-1632747956462-21 {
+			width: 217px;
+			min-height: 160px;
+			position: absolute;
+			top: 223.3333339691162px;
+			left: 828px;
+		}
+
+		.silex-id-1632747975277-23 {
+			width: 320px;
+			min-height: 224px;
+			position: absolute;
+			top: 331px;
+			left: 775px;
+		}
+
+		@media only screen and (max-width: 480px) {}
+	</style>
+	<title></title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" class="silex-custom-font" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<style type="text/css" class="silex-style-settings">
+		.website-width {
+			width: 1200px;
+		}
+
+		@media (min-width: 481px) {
+			.silex-editor {
+				min-width: 1400px;
+			}
+		}
+	</style>
+	<style class="silex-prodotype-style" type="text/css" data-style-id="all-style">
+		.text-element>.silex-element-content {
+			font-family: "Roboto", sans-serif;
+			color: #ffffff;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body data-silex-id="body-initial" class="
+      body-initial
+      all-style
+      enable-mobile
+      prevent-resizable prevent-selectable
+      editable-style
+      silex-runtime
+    " data-silex-type="container-element" style="">
+	<section data-silex-type="container-element" class="
+        container-element
+        editable-style
+        silex-id-1474394621033-3
+        section-element
+        prevent-resizable
+      " data-silex-id="silex-id-1474394621033-3" style="">
+		<div data-silex-type="container-element" class="
+          editable-style
+          silex-element-content silex-id-1474394621032-2
+          container-element
+          website-width
+          selected
+        " data-silex-id="silex-id-1474394621032-2">
+			<div data-silex-type="image-element" class="
+            editable-style
+            image-element
+            silex-id-1632729281210-6
+            page-page-1
+            paged-element
+          " data-silex-id="silex-id-1632729281210-6" style="">
+				<img onclick="window.location='/levelup?coins={{coins}}';" src="images/icons/arrow.png" />
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632741183975-20
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632741183975-20"
+          style=""
+        >
+          <img src="images/placeholder.png" />
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632740862975-19
+            page-page-1
+            paged-element
+            bigFont
+          "
+          data-silex-id="silex-id-1632740862975-19"
+          style=""
+          href="null"
+        >
+          <div class="silex-element-content normal"><p>Quiz: {{question}}</p></div>
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632747414355-1
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632747414355-1"
+          style=""
+		  id="option1img"
+        >
+          <img src="images/option.png" />
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632747407058-0
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632747407058-0"
+          style=""
+        >
+          <img src="images/question.png" />
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632747575461-11
+            page-page-1
+            paged-element
+			
+          "
+          data-silex-id="silex-id-1632747575461-11"
+          style=""
+		  id="option2img"
+        >
+          <img src="images/option.png" />
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632747575162-10
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632747575162-10"
+          style=""
+		  id="option3img"
+        >
+          <img src="images/option.png" />
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632747627101-13
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632747627101-13"
+          style=""
+        >
+          <img id="popup" src="images/popups/popup.png" />
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632747688138-14
+            page-page-1
+            paged-element
+            mediumFont2
+          "
+          data-silex-id="silex-id-1632747688138-14"
+          style=""
+          href="null"
+        >
+          <div class="silex-element-content normal">
+            <p>{{questionText}}</p>
+          </div>
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632747760771-16
+            page-page-1
+            paged-element
+            mediumFont
+          "
+          data-silex-id="silex-id-1632747760771-16"
+          style=""
+          href="null"
+        >
+		
+          <div  onclick="clickedOption('option1')" id="option1" class="silex-element-content normal" data-text="{{option1}}"><p>{{option1}}</p></div>
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632747830748-18
+            page-page-1
+            paged-element
+            mediumFont
+          "
+          data-silex-id="silex-id-1632747830748-18"
+          style=""
+          href="null"
+        >
+          <div id="option2" onclick="clickedOption('option2')" class="silex-element-content normal" data-text="{{option1}}"><p>{{option2}}</p></div>
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632747831018-19
+            page-page-1
+            paged-element
+            mediumFont	
+          "
+          data-silex-id="silex-id-1632747831018-19"
+          style=""
+          href="null"
+        >
+          <div id="option3" onclick="clickedOption('option3')" class="silex-element-content normal" data-text="{{option1}}"><p>{{option3}}</p></div>
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632747975277-23
+            page-page-1
+            paged-element
+            mediumFont2
+          "
+          data-silex-id="silex-id-1632747975277-23"
+          style=""
+          href="null"
+        >
+          <div id="correctans" class="silex-element-content normal"><p>{{correctOption}}</p></div>
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632747956462-21
+            page-page-1
+            paged-element
+            bigFont
+          "
+          data-silex-id="silex-id-1632747956462-21"
+          style=""
+          href="null"
+        >
+          <div id="ans" class="silex-element-content normal"><p>Answer :-</p></div>
+        </div>
+		<div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632738567796-3
+            page-page-1
+            paged-element
+            flip
+          "
+          data-silex-id="silex-id-1632738567796-3"
+          style=""
+        >
+          <img id="nextquestion" onclick="nextQuestion()" src="images/icons/arrow.png" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<style>
+.wrong {
+  position:relative;
+}
+
+.wrong:before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgba(255, 0, 0,0.5);
+  z-index:999;
+  border-radius: 30px;
+}
+
+.right {
+  position:relative;
+}
+
+.right:before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgba(124,252,0,0.5);
+  z-index:999;
+  border-radius: 30px;
+
+}
+
+
+</style>
+<script>
+
+var coinsvalue = {{coins}};
+var clicked = false;
+
+$('#popup').hide();
+$('#nextquestion').hide();
+$('#correctans').hide();
+$('#ans').hide();
+
+function clickedOption(option){
+	console.log("hi",$('#'+option).text());
+	if ($('#'+option).text() === "{{correctOption}}") {
+		if (!clicked) {
+			coinsvalue = coinsvalue+50;
+			$('#'+option+"img").addClass("right");
+			clicked = true;
+		}
+	}else{
+		if (!clicked) {
+			$('#'+option+"img").addClass("wrong");
+			clicked = true;
+		}
+	}
+	
+	$('#popup').fadeIn();
+	$('#nextquestion').fadeIn();
+	$('#correctans').fadeIn();
+	$('#ans').fadeIn();
+}
+
+function nextQuestion(){
+	window.location=('{{nexturl}}'+coinsvalue).replace(new RegExp("&amp;", 'g'),"&");
+}
+
+</script>
+
+
+{% endblock %}

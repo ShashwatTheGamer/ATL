@@ -1,0 +1,636 @@
+{% extends 'base.html' %}
+
+{% block body %}<!DOCTYPE html>
+<html class="" lang="">
+  <head>
+    <script
+      type="text/javascript"
+      class="silex-json-styles"
+      data-silex-static=""
+    >
+      window.silex = window.silex || {};
+      window.silex.data = {
+        site: { width: 1200 },
+        pages: [
+          {
+            id: "page-page-1",
+            displayName: "Page 1",
+            link: { linkType: "LinkTypePage", href: "#!page-page-1" },
+            canDelete: true,
+            canProperties: true,
+            canMove: true,
+            canRename: true,
+            opened: false,
+          },
+        ],
+      };
+    </script>
+    <meta charset="UTF-8" />
+    <!-- generator meta tag -->
+    <!-- leave this for stats and Silex version check -->
+    <meta name="generator" content="Silex v2.2.13" />
+    <!-- End of generator meta tag -->
+    <script
+      type="text/javascript"
+      src="https://editor.silex.me/static/2.12/jquery.js"
+      data-silex-static=""
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://editor.silex.me/static/2.12/jquery-ui.js"
+      data-silex-static=""
+      data-silex-remove-publish=""
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://editor.silex.me/static/2.12/pageable.js"
+      data-silex-static=""
+      data-silex-remove-publish=""
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://editor.silex.me/static/2.12/front-end.js"
+      data-silex-static=""
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://editor.silex.me/static/2.12/normalize.css"
+      data-silex-static=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://editor.silex.me/static/2.12/front-end.css"
+      data-silex-static=""
+    />
+
+    <style type="text/css" class="silex-style">
+      .bigFont {
+        font-size: 46px;
+      }
+      .bigFont2 {
+        font-size: 40px;
+      }
+      .mediumFont {
+        font-size: 30px;
+      }
+      .whiteLink:link {
+        color: white;
+      }
+      .whiteLink:visited {
+        color: white;
+      }
+      .whiteLink:hover {
+        color: white;
+      }
+      .whiteLink:active {
+        color: white;
+      }
+	  .centervertical{
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+	  }
+    </style>
+    <script type="text/javascript" class="silex-script"></script>
+    <style class="silex-inline-styles" type="text/css">
+      .body-initial {
+        background-color: rgba(255, 255, 255, 1);
+        position: static;
+        background-image: url(images/Background10.png);
+      }
+      .silex-id-1474394621033-3 {
+        position: static;
+        margin-top: -1px;
+      }
+      .silex-id-1474394621032-2 {
+        background-color: transparent;
+        min-height: 600px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .silex-id-1632729281210-6 {
+        width: 106px;
+        height: 88px;
+        position: absolute;
+        top: 22px;
+        left: 23.979171752929688px;
+      }
+      .silex-id-1632740829627-18 {
+        width: 79px;
+        height: 75px;
+        position: absolute;
+        top: 27px;
+        left: 179px;
+      }
+      .silex-id-1632740862975-19 {
+        width: 259px;
+        min-height: 160px;
+        position: absolute;
+        top: -10px;
+        left: 230px;
+      }
+      .silex-id-1632741183975-20 {
+        width: 340px;
+        height: 66px;
+        position: absolute;
+        top: 31px;
+        left: 151px;
+      }
+      .silex-id-1632742079619-22 {
+        width: 403px;
+        height: 357px;
+        position: absolute;
+        top: 182px;
+        left: 137px;
+      }
+      .silex-id-1632742101611-24 {
+        width: 457px;
+        height: 510px;
+        position: absolute;
+        top: 46px;
+        left: 670px;
+      }
+      .silex-id-1632742570343-34 {
+        width: 390px;
+        min-height: 100px;
+        background-color: transparent;
+        position: absolute;
+        top: 78px;
+        left: 703px;
+      }
+      .silex-id-1632744755862-38 {
+        width: 360px;
+        min-height: 280px;
+        position: absolute;
+        top: 180px;
+        left: 158px;
+        
+      }
+      .silex-id-1632745077915-40 {
+        width: 356px;
+        min-height: 57px;
+        position: absolute;
+        top: 10.979207754135132px;
+        left: 6.70831298828125px;
+      }
+      .silex-id-1632745251895-43 {
+        width: 373px;
+        min-height: 60px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 460px;
+        left: 151px;
+      }
+      @media only screen and (max-width: 480px) {
+      }
+    </style>
+    <title></title>
+    <style>
+      span {
+        font-size: 22px;
+      }
+      .skill-bar-percent span {
+        font-size: 25px;
+      }
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      class="silex-custom-font"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css" class="silex-style-settings">
+      .website-width {
+        width: 1200px;
+      }
+      @media (min-width: 481px) {
+        .silex-editor {
+          min-width: 1400px;
+        }
+      }
+    </style>
+    <style
+      class="silex-prodotype-style"
+      type="text/css"
+      data-style-id="all-style"
+    >
+      .text-element > .silex-element-content {
+        font-family: "Roboto", sans-serif;
+        color: #ffffff;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body
+    data-silex-id="body-initial"
+    class="
+      body-initial
+      all-style
+      enable-mobile
+      prevent-resizable prevent-selectable
+      editable-style
+      silex-runtime
+    "
+    data-silex-type="container-element"
+    style=""
+  >
+    <section
+      data-silex-type="container-element"
+      class="
+        container-element
+        editable-style
+        silex-id-1474394621033-3
+        section-element
+        prevent-resizable
+      "
+      data-silex-id="silex-id-1474394621033-3"
+      style=""
+    >
+      <div
+        data-silex-type="container-element"
+        class="
+          editable-style
+          silex-element-content silex-id-1474394621032-2
+          container-element
+          website-width
+          selected
+        "
+        data-silex-id="silex-id-1474394621032-2"
+      >
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632729281210-6
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632729281210-6"
+          style=""
+        >
+          <img onclick="window.location='/library1';" src="images/icons/arrow.png" />
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632741183975-20
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632741183975-20"
+          style=""
+        >
+          <img src="images/placeholder.png" />
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632742101611-24
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632742101611-24"
+          style=""
+        >
+          <img src="images/popups/popup2.png" />
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632740829627-18
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632740829627-18"
+          style=""
+        >
+          <img src="images/planetsreal/{{planet}}.png" />
+        </div>
+        <div
+          data-silex-type="html-element"
+          class="
+            editable-style
+            html-element
+            silex-id-1632742570343-34
+            page-page-1
+            paged-element
+            silex-component-skill-bars
+            bigFont
+          "
+          data-silex-id="silex-id-1632742570343-34"
+          style=""
+        >
+          <div class="silex-element-content">
+            <div class="skillbar clearfix" data-percent="0%">
+              <div class="skillbar-title" style="background: #6adcfa">
+                <span>Mass (10^24kg) </span>
+              </div>
+              <div
+                class="skillbar-bar"
+                style="
+                  background-color: rgb(106, 220, 250);
+                  width: 0px;
+                  overflow: hidden;
+                "
+              ></div>
+              <div class="skill-bar-percent"><span>{{mass}}</span></div>
+            </div>
+
+            <div class="skillbar clearfix" data-percent="0%">
+              <div class="skillbar-title" style="background: #6adcfa">
+                <span>Temperature (k)</span>
+              </div>
+              <div
+                class="skillbar-bar"
+                style="
+                  background-color: rgb(106, 220, 250);
+                  width: 0px;
+                  overflow: hidden;
+                "
+              ></div>
+              <div class="skill-bar-percent"><span>{{temp}}</span></div>
+            </div>
+
+            <div class="skillbar clearfix" data-percent="0%">
+              <div class="skillbar-title" style="background: #6adcfa">
+                <span>Volume (10^10km^3)</span>
+              </div>
+              <div
+                class="skillbar-bar"
+                style="
+                  background-color: rgb(106, 220, 250);
+                  width: 0px;
+                  overflow: hidden;
+                "
+              ></div>
+              <div class="skill-bar-percent"><span>{{volume}}</span></div>
+            </div>
+
+            <div class="skillbar clearfix" data-percent="0%">
+              <div class="skillbar-title" style="background: #6adcfa">
+                <span>Escape Velocity (km/s)</span>
+              </div>
+              <div
+                class="skillbar-bar"
+                style="
+                  background-color: rgb(106, 220, 250);
+                  width: 0px;
+                  overflow: hidden;
+                "
+              ></div>
+              <div class="skill-bar-percent"><span>4.3</span></div>
+            </div>
+
+            <div class="skillbar clearfix" data-percent="-1%">
+              <div class="skillbar-title" style="background: #6adcfa">
+                <span>Rotation Period (hours)</span>
+              </div>
+              <div
+                class="skillbar-bar"
+                style="
+                  background-color: rgb(106, 220, 250);
+                  width: 0px;
+                  overflow: hidden;
+                "
+              ></div>
+              <div class="skill-bar-percent"><span>{{rotation}}</span></div>
+            </div>
+
+            <div class="skillbar clearfix" data-percent="0%">
+              <div class="skillbar-title" style="background: #6adcfa">
+                <span>Length of Day (hours)</span>
+              </div>
+              <div
+                class="skillbar-bar"
+                style="
+                  background-color: rgb(106, 220, 250);
+                  width: 0px;
+                  overflow: hidden;
+                "
+              ></div>
+              <div class="skill-bar-percent"><span>{{length}}</span></div>
+            </div>
+
+            <div class="skillbar clearfix" data-percent="-1%">
+              <div class="skillbar-title" style="background: #6adcfa">
+                <span>Dist from Sun (km)</span>
+              </div>
+              <div
+                class="skillbar-bar"
+                style="
+                  background-color: rgb(106, 220, 250);
+                  width: 0px;
+                  overflow: hidden;
+                "
+              ></div>
+              <div class="skill-bar-percent"><span>{{dist}}</span></div>
+            </div>
+
+            <style type="text/css">
+              .skillbar {
+                position: relative;
+                display: block;
+                margin-bottom: 15px;
+                width: 100%;
+                background: #eee;
+                height: 50px;
+                border-radius: 3px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -webkit-transition: 0.4s linear;
+                -moz-transition: 0.4s linear;
+                -ms-transition: 0.4s linear;
+                -o-transition: 0.4s linear;
+                transition: 0.4s linear;
+                -webkit-transition-property: width, background-color;
+                -moz-transition-property: width, background-color;
+                -ms-transition-property: width, background-color;
+                -o-transition-property: width, background-color;
+                transition-property: width, background-color;
+              }
+              .skillbar-title {
+                position: relative;
+                float: left;
+                width: 65%;
+                font-weight: bold;
+                font-size: 13px;
+                color: #ffffff;
+                background: #6adcfa;
+                -webkit-border-top-left-radius: 3px;
+                -webkit-border-bottom-left-radius: 4px;
+                -moz-border-radius-topleft: 3px;
+                -moz-border-radius-bottomleft: 3px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+              }
+              .skillbar-title span {
+                display: block;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.1);
+                height: 50px;
+                line-height: 50px;
+                -webkit-border-top-left-radius: 3px;
+                -webkit-border-bottom-left-radius: 3px;
+                -moz-border-radius-topleft: 3px;
+                -moz-border-radius-bottomleft: 3px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+              }
+              .skillbar-bar {
+                float: left;
+                height: 50px;
+                width: 0px;
+                border-radius: 0 3px 3px 0;
+                -moz-border-radius: 0 3px 3px 0;
+                -webkit-border-radius: 0 3px 3px 0;
+              }
+              .skill-bar-percent {
+                position: absolute;
+                right: 10px;
+                top: 0;
+                font-size: 11px;
+                height: 50px;
+                line-height: 50px;
+                color: rgba(0, 0, 0, 0.4);
+              }
+            </style>
+            <script type="text/javascript">
+              var fillBarSize = $(".skillbar").width() * (1 - 47 / 100);
+              var doc = $(document);
+              doc.scroll(function () {
+                var skillbars = $(".skillbar");
+                // Start animation when the skillbars hit the middle of the screen
+                if (
+                  skillbars.offset().top <=
+                  doc.scrollTop() + $(window).height() / 2
+                ) {
+                  $(".skillbar").each(function () {
+                    $(this)
+                      .find(".skillbar-bar")
+                      .delay(500)
+                      .animate(
+                        {
+                          width:
+                            (fillBarSize *
+                              parseInt($(this).attr("data-percent"))) /
+                              100 +
+                            "px",
+                        },
+                        6000
+                      );
+                  });
+                }
+              });
+            </script>
+          </div>
+        </div>
+        <div
+          data-silex-type="image-element"
+          class="
+            editable-style
+            image-element
+            silex-id-1632742079619-22
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632742079619-22"
+          style=""
+        >
+          <img src="images/popups/popup.png" />
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632740862975-19
+            page-page-1
+            paged-element
+            bigFont
+          "
+          data-silex-id="silex-id-1632740862975-19"
+          style=""
+          href="null"
+        >
+          <div class="silex-element-content normal">
+            <p>{{Planet}}</p>
+            <span
+              class="_wysihtml-temp-caret-fix"
+              style="
+                position: absolute;
+                display: block;
+                min-width: 1px;
+                z-index: 99999;
+              "
+              >﻿</span
+            >
+          </div>
+        </div>
+        <div
+          data-silex-type="container-element"
+          class="
+            editable-style
+            container-element
+            silex-id-1632745251895-43
+            page-page-1
+            paged-element
+          "
+          data-silex-id="silex-id-1632745251895-43"
+          style=""
+        >
+          <div
+            data-silex-type="text-element"
+            class="
+              editable-style
+              text-element
+              silex-id-1632745077915-40
+              page-page-1
+              paged-element
+              whiteLink
+            "
+            data-silex-id="silex-id-1632745077915-40"
+            href="null"
+            style=""
+          >
+            <div class="silex-element-content normal">
+              <a
+                href="https://www.universetoday.com/33415/interesting-facts-about-the-planets/"
+                >https://www.universetoday.com/33415/interesting-facts-about-the-planets/</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          data-silex-type="text-element"
+          class="
+            editable-style
+            text-element
+            silex-id-1632744755862-38
+            page-page-1
+            paged-element
+            bigFont2
+          "
+          data-silex-id="silex-id-1632744755862-38"
+          style=""
+          href="null"
+        >
+          <div class="centervertical silex-element-content normal">
+            <p><b>{{fact}}</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+{% endblock %}

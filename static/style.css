@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/background4.png")
+}
+canvas {
+  display: block;
+}
+
+#p5_loading{
+	font-size: 50px;
+	color: white;
+	left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+
+}

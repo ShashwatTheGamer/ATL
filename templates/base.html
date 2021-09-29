@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		
+		<script src="static/p5.js">
+
+		</script>
+		<script src="static/p5.sound.min.js">
+
+		</script>
+		
+		<meta charset="utf-8">
+		<script src="static/p5.play.js">
+
+		</script>
+		<script src="static/p5.sound.min.js">
+		<
+
+		</script>
+		<meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+	</head>
+</head>
+
+<body>
+	<script>
+		function getCoins(){
+			var x = localStorage.getItem('coins')
+			if (x===null){
+				x = 0
+				localStorage.setItem('coins',0)
+			}
+			return x
+		}
+		function addCoins(coins){
+			return localStorage.setItem('coins',parseInt(getCoins())+parseInt(coins))
+		}
+
+		
+		function getLevel(){
+			var x = localStorage.getItem('level')
+			if (x===null){
+				x = "mercury"
+				localStorage.setItem('level',"mercury")
+			}
+			return x
+		}
+
+		function setLevel(level){
+			return localStorage.setItem('level',level)
+		}
+
+	</script>
+
+
+	<style>
+		#turn {
+			display: none;
+			z-index: 100;
+			position: fixed;
+			height: 100vh;
+			width: 100%;
+			background-image: url("images/Background10.png");
+			color: #ffffff;
+			font-size: 50px;
+		}
+
+		@media (orientation: portrait) {
+			#turn {
+				display: flex;
+			}
+		}
+	</style>
+	<div id="turn">
+		Please turn your device to landscape view to play this game.
+	</div>
+	<meta http-equiv="ScreenOrientation" content="autoRotate:disabled" /> {% block body %}{% endblock %}
+
+</body>
+
+</html>
