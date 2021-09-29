@@ -36,10 +36,10 @@ function preload() {
 
 	gameoverImg = loadImage(path+"images/gameover1.png");
 
-	spaceShipImg = loadImage(path+"images/rocket.png");
+	spaceShipImg = loadImage(path+"images/spaceship.png");
 	endImg = loadAnimation(path+"images/gameOver.png");
 	startButtonImg = loadImage(path+"images/buttons/start.png");
-	resetButtonImg = loadImage(path+"images/playButton.png");z
+	resetButtonImg = loadImage(path+"images/buttons/next.png");
 
 	pauseButtonImg = loadImage(path+"images/icons/pause.png");
 
@@ -104,7 +104,7 @@ function setup() {
 	cashG = new Group();
 	asteroidGroup = new Group();
 
-	spaceShip = createSprite(70, 500, 20, 20);
+	spaceShip = createSprite(70, windowHeight-100, 20, 20);
 	spaceShip.addImage(spaceShipImg);
 	spaceShip.scale = 1;
 
