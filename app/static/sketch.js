@@ -104,13 +104,9 @@ function setup() {
 	cashG = new Group();
 	asteroidGroup = new Group();
 
-	spaceShip = createSprite(70, windowHeight-100, 20, 20);
+	spaceShip = createSprite(windowWidth/2, (windowHeight-15));
 	spaceShip.addImage(spaceShipImg);
 	spaceShip.scale = 1;
-
-	spaceShip.y = windowHeight / 1
-	spaceShip.x = windowWidth / 2
-	spaceShip.scale = 0.6;
 	spaceShip.visible = true;
 
 }
@@ -189,7 +185,7 @@ function draw() {
 
 		textSize(25);
 		fill("gold");
-		text("💰 " + treasureCollection, (windowWidth / 2) - 80, 110);
+		text("💰 " + treasureCollection, (windowWidth / 2), 30);
 
 		textSize(25);
 		fill("red");
@@ -225,6 +221,8 @@ function draw() {
 	if(gameState === "OVER") {
 		pauseButton.visible = false;
 		resetButton.visible = true;
+		spaceShip.x = windowWidth/2;
+		spaceShip.y = windowHeight/2;
 		spaceShip.x = windowWidth/2;
 		spaceShip.y = windowHeight/2;
 		spaceShip.addImage(gameoverImg);
