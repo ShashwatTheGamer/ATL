@@ -293,6 +293,7 @@ function createCash() {
 }
 
 function createSword() {
+	
 	if (World.frameCount % 20 == 0) {
 		var asteroid = createSprite(Math.round(random(10, windowWidth), 40, 10, 10));
 		//generate random obstacles
